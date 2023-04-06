@@ -1,6 +1,6 @@
 export const Cloud = () => (
   <svg
-    className='absolute top-2 left-20 w-36 sm:top-5 sm:left-60'
+    className='absolute top-2 left-20 w-36 md:left-40'
     xmlns='http://www.w3.org/2000/svg'
     viewBox='0 0 64 64'
   >
