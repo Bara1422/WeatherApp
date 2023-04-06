@@ -4,13 +4,13 @@ import NextDaysWeather from './NextDaysWeather'
 import ButtonsActualWeather from './ButtonsActualWeather'
 import CurrentWeather from './CurrentWeather'
 
-const WeatherCard = ({ data }) => {
+const WeatherCard = ({ forecast, current, alerts }) => {
   return (
     <main className='flex flex-col gap-3 p-4 bg-slate-300 rounded-xl'>
-      <CurrentWeather data={data} />
-      <WeatherSummary data={data} />
-      <NextDaysWeather data={data} />
-      <ButtonsActualWeather data={data} />
+      <CurrentWeather forecast={forecast} current={current} />
+      <WeatherSummary current={current} alerts={alerts} />
+      <NextDaysWeather forecast={forecast} />
+      <ButtonsActualWeather current={current} />
     </main>
   )
 }

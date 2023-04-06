@@ -1,7 +1,7 @@
 import React from 'react'
 
-const HourlyWeather = ({ data }) => {
-  const hourlyForecast = data?.forecast.forecastday[0].hour.map((data) => ({
+const HourlyWeather = ({ forecast, location }) => {
+  const hourlyForecast = forecast?.forecastday[0].hour.map((data) => ({
     time: new Date(data.time).toLocaleTimeString('en-US', {
       hour: '2-digit'
     }),
@@ -16,7 +16,7 @@ const HourlyWeather = ({ data }) => {
     <section className='flex flex-col gap-3 p-4 overflow-scroll overflow-x-hidden bg-slate-300 rounded-xl max-h-96 sm:px-10'>
       <div>
         <h2 className='text-xl'>
-          {new Date(data?.location.localtime).toLocaleDateString('en-US', {
+          {new Date(location?.localtime).toLocaleDateString('en-US', {
             weekday: 'long',
             month: 'long',
             day: 'numeric'

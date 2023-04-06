@@ -14,13 +14,17 @@ function App() {
     <>
       {loading && <p className='animate-spin' />}
       <div className='container flex flex-col gap-4 p-4 mx-auto bg-slate-50'>
-        <Nav data={data} />
+        <Nav current={data?.current} />
 
-        <Header data={data} />
+        <Header location={data?.location} />
 
-        <WeatherCard data={data} />
+        <WeatherCard
+          forecast={data?.forecast}
+          current={data?.current}
+          alerts={data?.alerts}
+        />
 
-        <HourlyWeather data={data} />
+        <HourlyWeather forecast={data?.forecast} location={data?.location} />
       </div>
     </>
   )

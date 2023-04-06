@@ -1,7 +1,7 @@
 import React from 'react'
 
-const NextDaysWeather = ({ data }) => {
-  const forecastNextDays = data?.forecast.forecastday
+const NextDaysWeather = ({ forecast }) => {
+  const forecastNextDays = forecast?.forecastday
     .map((data) => ({
       day: new Date(data.date).toLocaleDateString('en-US', {
         weekday: 'short'

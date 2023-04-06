@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react'
 
-const WeatherSummary = ({ data }) => {
+const WeatherSummary = ({ current, alerts }) => {
   const [airQualityData, setAirQualityData] = useState('')
 
   useEffect(() => {
-    if (data?.current.air_quality['us-epa-index']) {
-      const aQ = data.current.air_quality['us-epa-index']
+    if (current?.air_quality['us-epa-index']) {
+      const aQ = current?.air_quality['us-epa-index']
       if (aQ === 1) {
         setAirQualityData('Good')
       } else if (aQ === 2) {
@@ -20,22 +20,22 @@ const WeatherSummary = ({ data }) => {
         setAirQualityData('Hazardous')
       }
     }
-  }, [data])
+  }, [current])
 
   return (
     <div className='text-sm'>
       <p className='flex items-center'>
-        {data?.current.condition.text}{' '}
+        {current?.condition.text}{' '}
         <img
           className='h-6'
-          src={data?.current.condition.icon}
-          alt={data?.current.condition.text}
+          src={current?.condition.icon}
+          alt={current?.condition.text}
         />
       </p>
-      <p>RealFeel: {data?.current.feelslike_c}º</p>
+      <p>RealFeel: {current?.feelslike_c}º</p>
       <p>Air Quality: {airQualityData}</p>
-      <p>RealFeel: {data?.current.feelslike_c}º</p>
-      {data?.alerts.alert.length > 0 && <p>{data?.alerts.alert[0].event}</p>}
+      <p>RealFeel: {current?.feelslike_c}º</p>
+      {alerts?.alert.length > 0 && <p>{alerts?.alert[0].event}</p>}
     </div>
   )
 }
