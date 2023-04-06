@@ -14,8 +14,8 @@ export const Cloud = () => (
         x2='395.79'
         y2='542.83'
       >
-        <stop stop-color='#c8e1e8' />
-        <stop offset='1' stop-color='#fff' />
+        <stop stopColor='#c8e1e8' />
+        <stop offset='1' stopColor='#fff' />
       </linearGradient>
       <linearGradient
         id='1'
@@ -26,8 +26,8 @@ export const Cloud = () => (
         x2='390.45'
         y2='542.88'
       >
-        <stop stop-color='#c3e6ee' />
-        <stop offset='1' stop-color='#fff' />
+        <stop stopColor='#c3e6ee' />
+        <stop offset='1' stopColor='#fff' />
       </linearGradient>
       <linearGradient
         id='2'
@@ -38,8 +38,8 @@ export const Cloud = () => (
         x2='394.41'
         y2='538.61'
       >
-        <stop stop-color='#b7d7e1' />
-        <stop offset='1' stop-color='#fff' />
+        <stop stopColor='#b7d7e1' />
+        <stop offset='1' stopColor='#fff' />
       </linearGradient>
     </defs>
     <g transform='matrix(1.06658 0 0 1.06658-745.92-181.44)'>
