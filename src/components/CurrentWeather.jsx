@@ -2,11 +2,12 @@ import React from 'react'
 
 const CurrentWeather = ({ forecast, current }) => {
   const forecastDay = forecast?.forecastday[0]
+
   return (
     <div className='flex gap-2 pb-3 divide-x divide-black sm:w-3/5 xsm:pb-0 justify-startspace-x-2'>
       <p className='flex justify-between text-5xl font-bold sm:w-3/5 '>
         <img
-          className='hidden xsm:flex xsm:h-24 '
+          className='hidden sm:h-24 xsm:flex xsm:h-20 '
           src={current?.condition.icon}
           alt={current?.condition.text}
         />

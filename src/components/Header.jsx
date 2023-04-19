@@ -6,6 +6,7 @@ const Header = ({ location, handleWeather }) => {
   const [suggestions, setSuggestions] = useState([])
   const [isLoading, setIsLoading] = useState(false)
   const prevSuggestionsRef = useRef()
+  const localTime = location?.localtime?.split(' ')[1]
 
   useEffect(() => {
     prevSuggestionsRef.current = suggestions
@@ -70,6 +71,7 @@ const Header = ({ location, handleWeather }) => {
           <p className='block text-2xl italic font-semibold truncate lg:inline'>
             {location?.region}, {location?.country}
           </p>
+          <span className='pt-2 font-bold'>Actual Time: {localTime}</span>
         </div>
         <form
           className='relative w-full pt-3 text-center'

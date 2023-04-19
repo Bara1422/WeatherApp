@@ -45,6 +45,7 @@ function App() {
             forecast={data?.forecast}
             current={data?.current}
             alerts={data?.alerts}
+            localtime={data?.location?.localtime}
           />
 
           <HourlyWeather forecast={data?.forecast} location={data?.location} />
