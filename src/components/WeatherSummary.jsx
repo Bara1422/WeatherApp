@@ -23,11 +23,11 @@ const WeatherSummary = ({ current, alerts }) => {
   }, [current])
 
   return (
-    <div className='text-sm'>
-      <p className='flex items-center'>
+    <div className='text-sm md:text-lg'>
+      <p className='flex items-center gap-2 '>
         {current?.condition.text}{' '}
         <img
-          className='h-6'
+          className='h-6 xsm:h-8'
           src={current?.condition.icon}
           alt={current?.condition.text}
         />
