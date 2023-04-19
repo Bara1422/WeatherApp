@@ -12,6 +12,7 @@ export const useWeather = () => {
       }&q=${label}&days=7&aqi=yes&alerts=yes`
     )
     const dataparse = await dataFetch.json()
+    console.log(dataparse)
     setData(dataparse)
     setLoading(false)
   }

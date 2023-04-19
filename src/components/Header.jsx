@@ -71,7 +71,10 @@ const Header = ({ location, handleWeather }) => {
             {location?.region}, {location?.country}
           </p>
         </div>
-        <form className='relative w-full text-center' onSubmit={handleSubmit}>
+        <form
+          className='relative w-full pt-3 text-center'
+          onSubmit={handleSubmit}
+        >
           <input
             type='text'
             placeholder='City, Region, Country'

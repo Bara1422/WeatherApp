@@ -16,9 +16,20 @@ function App() {
     fetchData(label)
   }
 
+  const conditionName = data?.current?.condition?.text
+    .toLowerCase()
+    .replace(/ /g, '')
+
+  const condition = conditionName?.includes('rain')
+    ? 'rain'
+    : `${conditionName}`
+
+  console.log(conditionName)
+
   const iconStyle = {
-    backgroundImage: `url(${data?.current?.condition?.icon})`,
-    backgroundSize: '75px'
+    backgroundImage: `url(/${condition}.jpg)`,
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: 'cover'
   }
 
   console.log(data)
