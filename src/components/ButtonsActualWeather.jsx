@@ -1,12 +1,12 @@
 import React from 'react'
-import Uv from '../assets/UV'
-import Humidity from '../assets/Humidity'
-import Rain from '../assets/Rain'
+import UvIcon from '../assets/UvIcon'
+import HumidityIcon from '../assets/HumidityIcon'
+import RainIcon from '../assets/RainIcon'
 
 const weatherIcons = {
-  humidity: <Humidity />,
-  precip: <Rain />,
-  uv: <Uv />
+  humidity: <HumidityIcon />,
+  precip: <RainIcon />,
+  uv: <UvIcon />
 }
 
 const ButtonsActualWeather = ({ current }) => {

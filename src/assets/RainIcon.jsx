@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Rain = () => {
+const RainIcon = () => {
   return (
     <svg
       className='w-6 h-6'
@@ -18,4 +18,4 @@ const Rain = () => {
   )
 }
 
-export default Rain
+export default RainIcon

@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Humidity = () => {
+const HumidityIcon = () => {
   return (
     <svg
       className='w-6 h-6'
@@ -19,4 +19,4 @@ const Humidity = () => {
   )
 }
 
-export default Humidity
+export default HumidityIcon

@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Uv = () => {
+const UvIcon = () => {
   return (
     <svg
       class='w-6 h-6'
@@ -17,4 +17,4 @@ const Uv = () => {
   )
 }
 
-export default Uv
+export default UvIcon
