@@ -1,5 +1,6 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react'
 import Spinner from '../UI/Spinner'
+import { getLocale } from '../utils/getLocale'
 
 const Header = ({ location, handleWeather }) => {
   const [value, setValue] = useState('')
@@ -71,7 +72,9 @@ const Header = ({ location, handleWeather }) => {
           <p className='block text-2xl italic font-semibold truncate lg:inline'>
             {location?.region}, {location?.country}
           </p>
-          <span className='pt-2 font-bold'>Actual Time: {localTime}</span>
+          <span className='pt-2 font-bold'>
+            {getLocale() === 'es' ? 'Hora Actual' : 'Actual Time'}: {localTime}
+          </span>
         </div>
         <form
           className='relative w-full pt-3 text-center'

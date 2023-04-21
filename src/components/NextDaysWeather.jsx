@@ -1,11 +1,7 @@
 import React from 'react'
 import { format } from 'date-fns'
 import { es, enUS } from 'date-fns/locale'
-
-function getLocale() {
-  const [languageCode] = navigator.language.split('-')
-  return languageCode
-}
+import { getLocale } from '../utils/getLocale'
 
 const NextDaysWeather = ({ forecast }) => {
   const forecastNextDays = forecast?.forecastday.map((data) => {
