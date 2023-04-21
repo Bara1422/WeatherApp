@@ -1,5 +1,11 @@
 import React from 'react'
 import { format } from 'date-fns'
+import { es, enUS } from 'date-fns/locale'
+
+function getLocale() {
+  const [languageCode] = navigator.language.split('-')
+  return languageCode
+}
 
 const NextDaysWeather = ({ forecast }) => {
   const forecastNextDays = forecast?.forecastday.map((data) => {
@@ -8,6 +14,7 @@ const NextDaysWeather = ({ forecast }) => {
     date.setHours(date.getHours() + 3)
     return {
       day: format(date, 'EEE', {
+        locale: getLocale() === 'es' ? es : enUS,
         timeZone: 'America/Argentina/Buenos_Aires'
       }),
       maxtemp_c: Math.round(data.day.maxtemp_c),
