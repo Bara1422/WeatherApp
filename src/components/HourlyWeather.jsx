@@ -13,7 +13,7 @@ const HourlyWeather = ({ forecast, location }) => {
   }))
 
   return (
-    <section className='flex flex-col gap-3 p-4 overflow-scroll overflow-x-hidden bg-slate-300 rounded-xl max-h-96 sm:px-10'>
+    <section className='flex flex-col shadow-lg gap-3 p-4 overflow-scroll overflow-x-hidden bg-slate-300 rounded-xl max-h-96 sm:px-10'>
       <div>
         <h2 className='text-3xl'>
           {new Date(location?.localtime).toLocaleDateString('en-US', {
@@ -29,7 +29,7 @@ const HourlyWeather = ({ forecast, location }) => {
             key={hour.time}
             className='flex items-center justify-between text-sm md:text-lg lg:justify-evenly'
           >
-            <span className='w-16'>{hour.time}</span>
+            <span className='w-16 font-semibold'>{hour.time}</span>
             <img src={hour.icon} alt={hour.text} className='w-11' />
             <span className='w-16 text-center'>{hour.temp}º</span>
             <span className='w-16 text-center'>{hour.humidity}%</span>

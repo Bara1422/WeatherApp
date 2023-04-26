@@ -6,7 +6,7 @@ import CurrentWeather from './CurrentWeather'
 
 const WeatherCard = ({ forecast, current, alerts }) => {
   return (
-    <main className='flex flex-col gap-3 p-4 bg-slate-300 rounded-xl'>
+    <main className='flex flex-col gap-3 p-4 shadow-lg bg-slate-300 rounded-xl'>
       <div className='gap-3 xsm:flex justify-evenly'>
         <CurrentWeather forecast={forecast} current={current} />
         <WeatherSummary current={current} alerts={alerts} />

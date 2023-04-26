@@ -68,13 +68,13 @@ const Header = ({ location, handleWeather }) => {
       <header className='flex flex-col items-center justify-between pt-3 px4 md:flex-row md:items-end'>
         <div className='flex flex-col pl-1 text-center'>
           <h1 className='text-4xl font-bold truncate'>{location?.name}</h1>
-          <p className='block text-2xl italic font-semibold truncate lg:inline'>
+          <p className='block text-2xl italic font-semibold truncate lg:inline px-1'>
             {location?.region}, {location?.country}
           </p>
           <span className='pt-2 font-bold'>Actual Time: {localTime}</span>
         </div>
         <form
-          className='relative w-full pt-3 text-center'
+          className='relative w-full pt-3 text-center md:text-end'
           onSubmit={handleSubmit}
         >
           <input
@@ -82,7 +82,7 @@ const Header = ({ location, handleWeather }) => {
             placeholder='City, Region, Country'
             value={value}
             onChange={(e) => handleInputChange(e.target.value)}
-            className='h-10 p-2 text-xl border border-gray-500 rounded-md w-[77%] sm:w-4/5 md:w-3/5'
+            className='h-10 p-2 text-xl border border-gray-500 rounded-md w-[77%] sm:w-4/5  '
           />
           {suggestions.length > 0 && (
             <ul className='absolute left-0 z-10 w-full py-2 text-lg bg-white border border-gray-200 rounded-md top-full'>

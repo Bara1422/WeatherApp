@@ -5,9 +5,9 @@ const CurrentWeather = ({ forecast, current }) => {
 
   return (
     <div className='flex gap-2 pb-3 divide-x divide-black sm:w-3/5 xsm:pb-0 justify-startspace-x-2'>
-      <p className='flex justify-between text-5xl font-bold sm:w-3/5 '>
+      <p className='flex justify-between items-center md:flex-row flex-col-reverse text-5xl font-bold sm:w-3/5 md:items-start'>
         <img
-          className='hidden sm:h-24 xsm:flex xsm:h-20 '
+          className='hidden  sm:h-24 sm:w-24 xsm:flex xsm:h-20 '
           src={current?.condition.icon}
           alt={current?.condition.text}
         />

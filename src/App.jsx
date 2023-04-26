@@ -36,8 +36,11 @@ function App() {
 
   return (
     <>
-      <div className='bg-gray-300' style={iconStyle}>
-        <div className='container flex flex-col max-w-screen-md gap-4 p-4 mx-auto bg-slate-50'>
+      <div className='bg-transparent opacity-95 font-oswald' style={iconStyle}>
+        <div
+          className='container xsm:max-w-[425px] md:max-w-[640px] lg:max-w-[768px] sm flex flex-col max-w-screen-md gap-4 p-4 mx-auto bg-slate-50 opacity-90
+        '
+        >
           <Header location={data?.location} handleWeather={handleWeather} />
           {loading && <Spinner />}
 
