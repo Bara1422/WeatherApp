@@ -3,7 +3,7 @@ import React from 'react'
 const UvIcon = () => {
   return (
     <svg
-      class='w-6 h-6'
+      className='w-6 h-6'
       theme='action'
       set='current-conditions'
       name='uv'

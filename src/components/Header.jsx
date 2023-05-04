@@ -85,11 +85,11 @@ const Header = ({ location, handleWeather }) => {
             className='h-10 p-2 text-xl border border-gray-500 rounded-md w-[77%] sm:w-4/5  '
           />
           {suggestions.length > 0 && (
-            <ul className='absolute left-0 z-10 w-full py-2 text-lg bg-white border border-gray-200 rounded-md top-full'>
+            <ul className='absolute md:right-0  z-10 w-full md:w-4/5 py-2 text-lg bg-white border border-gray-200 rounded-md top-full'>
               {suggestions.map((suggestion) => (
                 <li
                   key={suggestion.id}
-                  className='px-4 py-2 cursor-pointer hover:bg-gray-100'
+                  className='px-4 py-2 cursor-pointer text-start hover:bg-gray-100'
                   onClick={() => handleSuggestionClick(suggestion)}
                 >
                   {suggestion.name},{suggestion.region}, {suggestion.country}

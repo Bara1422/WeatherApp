@@ -24,21 +24,20 @@ function App() {
     ? 'rain'
     : `${conditionName}`
 
-  console.log(conditionName)
-
   const iconStyle = {
     backgroundImage: `url(/${condition}.jpg)`,
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover'
   }
 
-  console.log(data)
-
   return (
     <>
-      <div className='bg-transparent opacity-95 font-oswald' style={iconStyle}>
+      <div
+        className='bg-transparent opacity-[0.85] font-oswald'
+        style={iconStyle}
+      >
         <div
-          className='container xsm:max-w-[425px] md:max-w-[640px] lg:max-w-[768px] sm flex flex-col max-w-screen-md gap-4 p-4 mx-auto bg-slate-50 opacity-90
+          className='container xsm:max-w-[425px] md:max-w-[640px] lg:max-w-[768px] sm flex flex-col max-w-screen-md gap-4 p-4 mx-auto bg-slate-50 opacity-95
         '
         >
           <Header location={data?.location} handleWeather={handleWeather} />

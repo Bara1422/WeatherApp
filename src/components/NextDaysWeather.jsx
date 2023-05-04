@@ -3,7 +3,6 @@ import { format } from 'date-fns'
 
 const NextDaysWeather = ({ forecast }) => {
   const forecastNextDays = forecast?.forecastday.map((data) => {
-    console.log(data)
     const date = new Date(data.date)
     date.setHours(date.getHours() + 3)
     return {
@@ -16,12 +15,6 @@ const NextDaysWeather = ({ forecast }) => {
     }
   })
 
-  console.log(new Date(forecast?.forecastday[0].date))
-  /*  console.log(
-    format(new Date(forecast?.forecastday[1]?.date), "'Today is a' eeee")
-  ) */
-
-  console.log(forecastNextDays)
   return (
     <div className='flex pt-2 text-center border-t border-gray-400 justify-evenly'>
       {forecastNextDays?.map((day) => (
